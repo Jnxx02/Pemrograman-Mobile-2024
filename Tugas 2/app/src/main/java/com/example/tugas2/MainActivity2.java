@@ -1,4 +1,4 @@
-package com.example.biodata;
+package com.example.tugas2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,11 +13,6 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-    }
-
-    public void kirimEmail(View view) {
-        Intent email = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:jonathankwan056@gmail.com"));
-        startActivity(email);
     }
 
     public void telpon(View view) {
