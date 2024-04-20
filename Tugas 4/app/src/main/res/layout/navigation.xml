@@ -5,8 +5,7 @@
     android:background="#376565"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:layout_gravity="center_horizontal"
-    android:gravity="center_vertical">
+    android:layout_gravity="center_horizontal">
 
     <RelativeLayout
         android:id="@+id/rl_home"
