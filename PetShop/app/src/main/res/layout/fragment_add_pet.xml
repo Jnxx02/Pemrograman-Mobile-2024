@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.AddPetFragment">
+
+    <RelativeLayout
+        android:id="@+id/rv_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#376565">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:paddingVertical="4dp"
+                android:src="@drawable/petshop_logo"/>
+
+            <TextView
+                android:id="@+id/pet_post"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Add Pet"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:paddingVertical="4dp"
+                android:src="@drawable/petshop_logo"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigation"
+        android:layout_below="@id/rv_header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/data_pet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pet's Data"
+                android:textColor="#091010"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="25dp"/>
+
+            <!-- Nama Pet -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_nama_pet"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/data_pet"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_nama_pet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama Pet"
+                    android:textColor="@color/white"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Jenis Pet -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_jenis_pet"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_nama_pet"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_jenis_pet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Jenis Pet"
+                    android:textColor="@color/white"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Jenis Kelamin -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_jenis_kelamin"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jenis_pet"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_jenis_kelamin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Jenis Kelamin"
+                    android:textColor="@color/white"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Umur -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_umur"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jenis_kelamin"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_umur"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Umur"
+                    android:textColor="@color/white"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Harga -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_harga"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_umur"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_harga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Harga"
+                    android:textColor="@color/white"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_gambar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pet's Preview"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#091010"
+                android:layout_below="@id/tv_harga"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="25dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_gambar"
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/tv_gambar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_gambar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_add_a_photo_24"
+                    android:layout_gravity="center"/>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_posting"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_gambar"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="#376565"
+                android:text="Add Pet"
+                android:textSize="20sp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/navigation" />
+
+</RelativeLayout>
